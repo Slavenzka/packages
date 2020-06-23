@@ -1,0 +1,21 @@
+.packages {
+  padding-top: 9.7rem;
+  padding-bottom: 8.5rem;
+
+  &__heading {
+    @include h2($colorFontMain);
+
+    margin: 0;
+    opacity: 0.2;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5.7rem 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+}

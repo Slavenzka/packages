@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  font-size: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 144rem;
+  padding: 0 13.3rem;
+}
+
+@media (max-width: $width__desktop) {
+  html {
+    font-size: 8.5px;
+  }
+}

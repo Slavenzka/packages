@@ -1,0 +1,12 @@
+.button {
+  @include button($colorFontHighlight1);
+
+  display: block;
+  margin: 0;
+  padding: 1.3rem 2rem 1.4rem 2rem;
+  width: 100%;
+  background-color: $colorBgMain;
+  border: none;
+  box-shadow: none;
+  border-radius: 6.35rem;
+}
