@@ -5,8 +5,34 @@
   margin: 0;
   padding: 1.3rem 2rem 1.4rem 2rem;
   width: 100%;
+  text-align: center;
   background-color: $colorBgMain;
   border: none;
   box-shadow: none;
   border-radius: 6.35rem;
+
+  &--dark {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: $colorFontLightest;
+    background-color: $colorBgHighlight1;
+    border-radius: 2.75rem;
+  }
+
+  &--light {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: $colorFontHighlight1;
+    background-color: $colorBgMain;
+    border-radius: 2.75rem;
+  }
+
+  &--transparent {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: $colorFontLightest;
+    background-color: transparent;
+    border-radius: 2.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+  }
 }

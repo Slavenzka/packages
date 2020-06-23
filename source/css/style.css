@@ -10,7 +10,7 @@
   font-weight: 400;
   font-display: swap;
   font-style: normal;
-  src: url("../fonts/FuturaPT-Bold.woff2") format("woff2"), url("../fonts/FuturaPT-Bold.woff") format("woff"); }
+  src: url("../fonts/FuturaPT-Book.woff2") format("woff2"), url("../fonts/FuturaPT-Book.woff") format("woff"); }
 
 @font-face {
   font-family: "Futura";
@@ -72,9 +72,20 @@ a {
   html {
     font-size: 8.5px; } }
 
+@media (max-width: 1280px) {
+  html {
+    font-size: 5px; } }
+
+@media (max-width: 767px) {
+  html {
+    font-size: 7px; }
+  .container {
+    width: 100%;
+    padding: 0 2rem; } }
+
 .packages {
   padding-top: 9.7rem;
-  padding-bottom: 8.5rem; }
+  padding-bottom: 3rem; }
   .packages__heading {
     font-family: "Futura", Arial, sans-serif;
     font-size: 3.2rem;
@@ -97,6 +108,18 @@ a {
     margin: 5.7rem 0 0 0;
     padding: 0;
     list-style: none; }
+
+@media (max-width: 767px) {
+  .packages__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .packages__item:not(:first-of-type) {
+    margin-top: 3rem; } }
 
 .card {
   width: 36.4rem; }
@@ -169,7 +192,7 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
     margin: 0;
-    padding: 0; }
+    padding: 0 0 8rem 0; }
   .card__key {
     font-family: "Futura", Arial, sans-serif;
     font-size: 1.5rem;
@@ -194,7 +217,7 @@ a {
       text-transform: uppercase; }
   .card__controls {
     position: relative;
-    margin-top: -7.1rem;
+    margin-top: -10rem;
     padding: 7.1rem 0 0 0; }
     .card__controls--green {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 202, 105, 0)), to(#1dca69));
@@ -219,8 +242,264 @@ a {
   margin: 0;
   padding: 1.3rem 2rem 1.4rem 2rem;
   width: 100%;
+  text-align: center;
   background-color: #fff;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 6.35rem; }
+  .button--dark {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #1dca69;
+    border-radius: 2.75rem; }
+  .button--light {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: #1dca69;
+    background-color: #fff;
+    border-radius: 2.75rem; }
+  .button--transparent {
+    padding: 1.9rem 2rem 2rem 2rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 2.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.29); }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9e9;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s; }
+  .modal--visible {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2; }
+  .modal__content {
+    position: relative;
+    padding: 5.6rem 6rem 6rem 6rem;
+    width: 51.8rem;
+    background-color: #fff;
+    border-radius: 1.8rem;
+    -webkit-box-shadow: 0 0.2rem 3.5rem 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.2rem 3.5rem 0 rgba(0, 0, 0, 0.15); }
+  .modal__close {
+    font-family: "Futura", Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    color: #1dca69;
+    position: absolute;
+    top: calc(-1.6rem - 2.5rem);
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer; }
+  .modal__icon {
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
+    fill: #1dca69; }
+  .modal__logo {
+    position: absolute;
+    top: calc(-2rem - 2.2rem);
+    left: 0; }
+  .modal__heading {
+    font-family: "Futura", Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: #1a1919;
+    margin: 0;
+    opacity: 0.2; }
+  .modal__confidential {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #585858;
+    position: absolute;
+    top: calc(100% + 2.5rem);
+    left: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.5; }
+  .modal__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 4rem; }
+  .modal__label {
+    font-family: "Futura", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: #585858;
+    display: block;
+    opacity: 0.5; }
+    .modal__label:not(:first-of-type) {
+      margin-top: 1.8rem; }
+  .modal__required {
+    color: #d36c6c; }
+  .modal__input {
+    margin-top: 0.8rem;
+    width: 100%; }
+  .modal__submit {
+    margin: 4rem auto 0 auto;
+    width: 27.2rem; }
+
+@media (max-width: 767px) {
+  .modal__content {
+    padding: 3rem 3rem 3rem 3rem;
+    width: 90%; }
+  .modal__form {
+    margin-top: 2rem; } }
+
+.input {
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  color: #585858;
+  padding: 0 2rem;
+  height: 5.5rem;
+  border: 1px solid #e9e9e9;
+  border-radius: 0.2rem;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  outline: none; }
+  .input::-webkit-input-placeholder {
+    font-weight: 400;
+    opacity: 0.5; }
+  .input::-ms-input-placeholder {
+    font-weight: 400;
+    opacity: 0.5; }
+  .input::placeholder {
+    font-weight: 400;
+    opacity: 0.5; }
+  .input:hover, .input:focus {
+    border: 1px solid #1dca69; }
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #7200de; }
+  .error__message {
+    font-family: "Futura", Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: #fff;
+    margin: 3.3rem 0 0 0;
+    line-height: 4rem;
+    text-align: center; }
+  .error__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 4rem; }
+  .error__button {
+    width: 25.6rem; }
+    .error__button:not(:first-of-type) {
+      margin-top: 2.4rem; }
+
+.success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3rem;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1dca69; }
+  .success__message {
+    font-family: "Futura", Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: #fff;
+    margin: 3.3rem 0 0 0;
+    line-height: 4rem;
+    text-align: center; }
+  .success__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 4rem; }
+  .success__button {
+    margin-top: 5rem;
+    width: 25.6rem;
+    text-transform: uppercase; }

@@ -46,3 +46,35 @@
   line-height: 2rem;
   color: $color;
 }
+
+@mixin small($color) {
+  font-family: "Futura", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  color: $color;
+}
+
+@mixin input($color) {
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  color: $color;
+}
+
+@mixin confidentiality($color) {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: $color;
+}
+
+@mixin labelInput($color) {
+  font-family: "Futura", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: $color;
+}

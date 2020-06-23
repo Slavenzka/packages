@@ -42,3 +42,20 @@ a {
     font-size: 8.5px;
   }
 }
+
+@media (max-width: $width__notebook) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: $width__tablet) {
+  html {
+    font-size: 7px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}

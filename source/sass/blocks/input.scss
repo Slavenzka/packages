@@ -1,0 +1,20 @@
+.input {
+  @include input($colorFontAux);
+
+  padding: 0 2rem;
+  height: 5.5rem;
+  border: 1px solid $colorBgModal;
+  border-radius: 0.2rem;
+  transition-duration: $transitionDuration;
+  outline: none;
+
+  &::placeholder {
+    font-weight: 400;
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $colorBgHighlight1;
+  }
+}

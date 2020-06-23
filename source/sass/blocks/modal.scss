@@ -1,0 +1,122 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $colorBgModal;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition-duration: $transitionDuration;
+
+  &--visible {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2;
+  }
+
+  &__content {
+    position: relative;
+    padding: 5.6rem 6rem 6rem 6rem;
+    width: 51.8rem;
+    background-color: $colorBgMain;
+    border-radius: 1.8rem;
+    box-shadow: 0 0.2rem 3.5rem 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &__close {
+    @include small($colorBgHighlight1);
+
+    position: absolute;
+    top: calc(-1.6rem - 2.5rem);
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
+    fill: $colorBgHighlight1;
+  }
+
+  &__logo {
+    position: absolute;
+    top: calc(-2rem - 2.2rem);
+    left: 0;
+  }
+
+  &__heading {
+    @include h1($colorFontMain);
+
+    margin: 0;
+    opacity: 0.2;
+  }
+
+  &__confidential {
+    @include confidentiality($colorFontAux);
+
+    position: absolute;
+    top: calc(100% + 2.5rem);
+    left: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.5;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  &__label {
+    @include labelInput($colorFontAux);
+
+    display: block;
+    opacity: 0.5;
+
+    &:not(:first-of-type) {
+      margin-top: 1.8rem;
+    }
+  }
+
+  &__required {
+    color: $colorFontMark;
+  }
+
+  &__input {
+    margin-top: 0.8rem;
+    width: 100%;
+  }
+
+  &__submit {
+    margin: 4rem auto 0 auto;
+    width: 27.2rem;
+  }
+}
+
+@media (max-width: $width__tablet) {
+  .modal {
+    &__content {
+      padding: 3rem 3rem 3rem 3rem;
+      width: 90%;
+    }
+
+    &__form {
+      margin-top: 2rem;
+    }
+  }
+}
